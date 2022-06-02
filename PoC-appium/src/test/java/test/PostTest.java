@@ -1,19 +1,15 @@
 package test;
 
 import io.appium.java_client.android.AndroidDriver;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.FeedPage;
-import pages.LoginPage;
 
 import java.net.URL;
 
 public class PostTest {
     public static void run(AndroidDriver driver){
         publish(driver);
-        likePost(driver);
+        //likePost(driver);
         findMyPost(driver);
     }
 

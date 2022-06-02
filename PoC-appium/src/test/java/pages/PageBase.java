@@ -1,13 +1,8 @@
 package pages;
 
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import org.checkerframework.checker.index.qual.SubstringIndexBottom;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,7 +14,7 @@ public class PageBase {
 
     public PageBase(AndroidDriver driver){
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        //PageFactory.initElements(driver,this);
     }
 
     public void waitForVisibility(){

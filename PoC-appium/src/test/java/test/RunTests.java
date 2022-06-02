@@ -17,7 +17,7 @@ public class RunTests {
     public void setUp() throws Exception {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
-        caps.setCapability("platformVersion", "11");
+        caps.setCapability("platformVersion", "10");
         caps.setCapability("deviceName", "Android Emulator");
         caps.setCapability("automationName", "UiAutomator2");
         caps.setCapability("app", APP);
@@ -33,6 +33,10 @@ public class RunTests {
     @Test
     public void loginTest(){
         LoginTest.run(driver);
+    }
+
+    @Test public void postTest(){
+        loginTest();
         PostTest.run(driver);
     }
 }
